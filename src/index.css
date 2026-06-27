@@ -1,0 +1,205 @@
+/* Container & Layout */
+.pnr-container {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Header Section */
+  .pnr-header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .pnr-title {
+    margin: 0 0 8px 0;
+    color: #1a365d;
+    font-size: 24px;
+  }
+  
+  .pnr-subtitle {
+    margin: 0;
+    color: #627d98;
+    font-size: 14px;
+  }
+  
+  /* Form Styles */
+  .pnr-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .pnr-input {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .pnr-input:focus {
+    border-color: #2b6cb0;
+  }
+  
+  .pnr-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #2b6cb0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  
+  .pnr-button:hover:not(:disabled) {
+    background-color: #2b5592;
+  }
+  
+  .pnr-button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  /* Error Message */
+  .pnr-error {
+    padding: 12px;
+    background-color: #fff5f5;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Result Cards */
+  .pnr-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .pnr-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  }
+  
+  .pnr-card-title {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #2d3748;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 8px;
+  }
+  
+  /* Grid Layout */
+  .pnr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    font-size: 14px;
+    color: #4a5568;
+  }
+  
+  .pnr-grid-item {
+    line-height: 1.5;
+  }
+  
+  /* Route Display */
+  .pnr-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .pnr-route-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .pnr-station-code {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2b6cb0;
+  }
+  
+  .pnr-station-name {
+    font-size: 13px;
+    color: #718096;
+    margin-top: 2px;
+    text-align: center;
+  }
+  
+  .pnr-time {
+    font-size: 12px;
+    background-color: #edf2f7;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  
+  .pnr-arrow {
+    font-size: 20px;
+    color: #cbd5e1;
+  }
+
+    /* Status Colors */
+  .status-confirm {
+    color: #2f855a; /* Smooth Green */
+    font-weight: 600;
+  }
+
+  .status-other {
+    color: #dd6b20; /* Smooth Orange */
+    font-weight: 600;
+  }
+
+  /* Header Layout Flexbox */
+.pnr-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #edf2f7;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* Override previous title border since it's now on the wrapper */
+.pnr-card-title {
+  margin: 0;
+  font-size: 16px;
+  color: #2d3748;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pnr-card-status {
+  font-size: 14px;
+  color: #4a5568;
+}
+  
+  /* Responsive adjustment */
+  @media (max-width: 480px) {
+    .pnr-form {
+      flex-direction: column;
+    }
+    .pnr-grid {
+      grid-template-columns: 1fr;
+    }
+  }
